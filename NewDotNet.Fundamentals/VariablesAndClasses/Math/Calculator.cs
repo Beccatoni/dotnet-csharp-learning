@@ -1,4 +1,4 @@
-namespace NewDotNet.Fundamentals.Variables;
+namespace NewDotNet.Fundamentals.VariablesAndClasses.Math;
 
 public class Calculator
 {
