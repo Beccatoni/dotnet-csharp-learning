@@ -4,7 +4,7 @@ public class Customer
 {
     public int Id;
     public string Name;
-    public List<Order>  Orders;
+    public readonly List<Order>  Orders = new List<Order>();
 
     public Customer() 
     {
@@ -19,6 +19,10 @@ public class Customer
     {
         Id = id;
         Name = name;
+    }
+
+    public void Promote()
+    {
     }
 
 }

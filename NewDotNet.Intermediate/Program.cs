@@ -1,6 +1,7 @@
 
 
 using NewDotNet.Intermediate.Section1.Classes;
+using NewDotNet.Intermediate.Section1.Classes.accessmodifiers;
 
 Console.WriteLine("Hello from NewDotNet.Intermediate!");
 
@@ -51,3 +52,19 @@ static void UsePoints()
         Console.WriteLine("An unexpected error occured: {0}", e.Message);
     } 
 }
+
+var customer5 = new Customer();
+customer.Orders.Add(new Order());
+customer.Orders.Add(new Order());
+customer.Promote();
+Console.WriteLine(customer.Orders.Count);
+
+ var man = new Person2(new DateTime(1999, 04, 22));
+ // man.SetBirthDate(new DateTime(1985, 03, 14));
+ // Console.WriteLine(man.GetBirthDate());
+ Console.WriteLine(man.BirthDate);
+ Console.WriteLine(man.Age);
+ 
+ var cookie =  new HttpCookie();
+ cookie["name"] = "Becca";
+ Console.WriteLine(cookie["name"]);
