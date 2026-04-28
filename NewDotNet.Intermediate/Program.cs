@@ -2,6 +2,11 @@
 
 using NewDotNet.Intermediate.Section1.Classes;
 using NewDotNet.Intermediate.Section1.Classes.accessmodifiers;
+using NewDotNet.Intermediate.Section1.Classes.Composition;
+using NewDotNet.Intermediate.Section1.Classes.Inheritance;
+using Customer2 = Amazon.Customer;
+using Customer = NewDotNet.Intermediate.Section1.Classes.Customer;
+
 
 Console.WriteLine("Hello from NewDotNet.Intermediate!");
 
@@ -68,3 +73,30 @@ Console.WriteLine(customer.Orders.Count);
  var cookie =  new HttpCookie();
  cookie["name"] = "Becca";
  Console.WriteLine(cookie["name"]);
+ 
+ var stopWatch = new StopWatch();
+ stopWatch.Start();
+ for (var i = 0; i < 10; i++)
+ {
+     Console.WriteLine("Hello {0}, I would like to see how long it takes to run a for loop", i);
+ }
+ stopWatch.Stop();
+ Console.WriteLine("Duration: {0}", stopWatch.Duration);
+ 
+ 
+ // INHERITANCE
+ var text = new Text();
+ text.Width = 100;
+ text.Copy();
+ 
+ // Composition
+ var dbMigrator = new DbMigrator(new Logger());
+dbMigrator.Migrate();
+ 
+ var logger = new Logger();
+ var installer = new Installer(logger);
+ installer.Install();
+ 
+ //
+ var customerSpecial = new Customer2();
+ 
