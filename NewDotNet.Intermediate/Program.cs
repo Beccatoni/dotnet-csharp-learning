@@ -1,9 +1,12 @@
 
 
+using System.Collections;
 using NewDotNet.Intermediate.Section1.Classes;
 using NewDotNet.Intermediate.Section1.Classes.accessmodifiers;
+using NewDotNet.Intermediate.Section1.Classes.Casting;
 using NewDotNet.Intermediate.Section1.Classes.Composition;
 using NewDotNet.Intermediate.Section1.Classes.Inheritance;
+using NewDotNet.Intermediate.Section2;
 using Customer2 = Amazon.Customer;
 using Customer = NewDotNet.Intermediate.Section1.Classes.Customer;
 
@@ -99,4 +102,36 @@ dbMigrator.Migrate();
  
  //
  var customerSpecial = new Customer2();
+
+
+// base class
+var car = new Car("RAD3245");
+
+// Casting
+Text2 text2 = new Text2();
+Shape2 shape2 = text2;
+ text.Width = 200;
+ shape2.Width = 100;
  
+// upcasting
+ // StreamReader reader = new StreamReader(new FileStream("file.txt", FileMode.Open));
+ // ArrayList list = new ArrayList();
+ // list.Add(1);
+ // list.Add("Wierd");
+ // list.Add(new Text());
+ // Console.WriteLine("An array list can be not safe in C# since it stores data with different types");
+ // foreach (var item in list)
+ // {
+ //     Console.WriteLine(item);
+ // }
+ // down casting
+ Shape2 shape3 = new Text2();
+ Text2 text3 = (Text2)shape3;
+ 
+ 
+ // Modular calculator
+ ModularCalculator calculator = new ModularCalculator(10, 0);
+ calculator.Addition();
+ calculator.Multiplication();
+ calculator.Division();
+calculator.Subtraction();
