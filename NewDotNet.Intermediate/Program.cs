@@ -135,3 +135,40 @@ Shape2 shape2 = text2;
  calculator.Multiplication();
  calculator.Division();
 calculator.Subtraction();
+
+
+// Boxing and Unboxing
+var list1 = new ArrayList();
+list1.Add(1); // Boxing
+list1.Add("Jade");
+list1.Add(new DateTime(2024, 06, 01));
+
+// var numberr = (int)list1[1]; // this will throw an exception since the value is a string and cannot be unboxed to an int
+// Console.WriteLine(numberr);
+
+var anotherList = new List<int>();
+var names = new List<string>();
+
+// Polymorphism
+var shapes = new List<Shape>();
+shapes.Add(new Circle());
+shapes.Add(new Rectangle());
+
+var canvas = new Canvas();
+canvas.DrawShapes(shapes);
+
+
+// abstract classes
+var circle = new Circle2();
+circle.Draw();
+
+var rectangle = new Rectangle2();
+rectangle.Draw();
+
+
+// Interfaces
+
+var orderProcessor = new OrderProcessor(new ShippingCalculator());
+var order3 = new Order3 { DatePlaced = DateTime.Now, TotalPrice = 100f };
+orderProcessor.Process(order3);
+
