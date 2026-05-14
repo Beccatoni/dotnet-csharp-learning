@@ -1,12 +1,14 @@
 
 
 using System.Collections;
+using NewDotNet.Intermediate.Exercises;
 using NewDotNet.Intermediate.Section1.Classes;
 using NewDotNet.Intermediate.Section1.Classes.accessmodifiers;
 using NewDotNet.Intermediate.Section1.Classes.Casting;
 using NewDotNet.Intermediate.Section1.Classes.Composition;
 using NewDotNet.Intermediate.Section1.Classes.Inheritance;
 using NewDotNet.Intermediate.Section2;
+using NewDotNet.Intermediate.Section2.Extensibility;
 using Customer2 = Amazon.Customer;
 using Customer = NewDotNet.Intermediate.Section1.Classes.Customer;
 
@@ -93,8 +95,8 @@ Console.WriteLine(customer.Orders.Count);
  text.Copy();
  
  // Composition
- var dbMigrator = new DbMigrator(new Logger());
-dbMigrator.Migrate();
+//  var dbMigrator = new DbMigrator(new Logger());
+// dbMigrator.Migrate();
  
  var logger = new Logger();
  var installer = new Installer(logger);
@@ -171,4 +173,31 @@ rectangle.Draw();
 var orderProcessor = new OrderProcessor(new ShippingCalculator());
 var order3 = new Order3 { DatePlaced = DateTime.Now, TotalPrice = 100f };
 orderProcessor.Process(order3);
+
+
+var dbMig = new DbMigrator2(new ConsoleLogger());
+dbMig.Migrate();
+
+
+var encoder = new VideoEncoder();
+encoder.RegisterNotificationChannel(new MailNotificationChannel());
+encoder.RegisterNotificationChannel(new SmsNotificationChannel());
+encoder.Encode(new Video());
+
+// exercises
+
+// Stop Watch
+var stopWatch1 =  new StopWatch1();
+for (int i = 0; i < 2; i++)
+{
+    stopWatch1.Start();
+    Thread.Sleep(1000);
+    stopWatch1.Stop();
+    Console.WriteLine("Duration: {0}",stopWatch1.GetInterval().ToString());
+    Console.ReadLine();
+}
+
+
+// Stack
+
 
