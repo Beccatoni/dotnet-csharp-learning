@@ -1,6 +1,6 @@
 namespace NewDotNet.Intermediate.Exercises;
 
-public class Stack
+public class Stack1
 {
     private readonly List<object> _list = new ();
 
@@ -21,10 +21,16 @@ public class Stack
         }
 
         var index = _list.Count - 1;
-        object toReturn = _list[index];
+        var toReturn = _list[index];
 
         _list.RemoveAt(index);
 
         return toReturn;
+    }
+
+    // clearing removes all the objects in the list.
+    public void Clear()
+    {
+        _list.Clear();
     }
 }

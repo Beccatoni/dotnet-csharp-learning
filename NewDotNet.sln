@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "Amazon\Amazon.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability.UnitTests", "Testability.UnitTests\Testability.UnitTests.csproj", "{270A5ED8-A89C-4012-84E8-C82AEAAA9776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewDotNet.Advanced", "NewDotNet.Advanced\NewDotNet.Advanced.csproj", "{C1882B0F-CDF0-4383-B446-BA0278CFBD5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{270A5ED8-A89C-4012-84E8-C82AEAAA9776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270A5ED8-A89C-4012-84E8-C82AEAAA9776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{270A5ED8-A89C-4012-84E8-C82AEAAA9776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1882B0F-CDF0-4383-B446-BA0278CFBD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1882B0F-CDF0-4383-B446-BA0278CFBD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1882B0F-CDF0-4383-B446-BA0278CFBD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1882B0F-CDF0-4383-B446-BA0278CFBD5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
